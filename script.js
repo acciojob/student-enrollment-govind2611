@@ -14,11 +14,10 @@ async function fetchEnrollmentData() {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(enrollmentData.enrollmentData);
-    }, 1000); // Simulated delay of 1 second (you can replace this with your actual API fetch)
+    }, 1000); 
   });
 }
 
-// Calculate enrollment asynchronously
 async function calculateEnrollment() {
   const enrollmentData = await fetchEnrollmentData();
 
@@ -34,7 +33,6 @@ async function calculateEnrollment() {
     }
   });
 
-  // Log the list of courses and their total enrollment numbers
   for (const course in courseEnrollment) {
     console.log(`Course: ${course}, Total Enrollment: ${courseEnrollment[course]}`);
   }
